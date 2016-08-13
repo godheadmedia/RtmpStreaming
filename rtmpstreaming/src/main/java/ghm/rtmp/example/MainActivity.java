@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import io.vov.vitamio.MediaPlayer;
 import io.vov.vitamio.Vitamio;
+import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
 
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
 
         empty = (TextView) this.findViewById(R.id.empty);
         mVideoView = (VideoView) this.findViewById(R.id.surface_view);
-        mVideoView.setMediaController(null);//to enable media controllers replace "null" with "this"
+        mVideoView.setMediaController(new MediaController(this));//to enable media controllers replace "new MediaController(this)" with null
         mVideoView.setOnCompletionListener(this);
         mVideoView.setOnPreparedListener(this);
         mVideoView.setOnErrorListener(this);// setting on error listner
