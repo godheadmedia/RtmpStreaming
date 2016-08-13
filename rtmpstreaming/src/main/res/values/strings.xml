@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Rtmp Player</string>
+
+    <string name="text_no_item">No item available.</string>
+
+    <string name="streamurl">Place Your Stream Url</string>
+</resources>
